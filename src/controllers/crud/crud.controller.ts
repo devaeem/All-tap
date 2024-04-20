@@ -8,3 +8,13 @@ export const getCrud = (req: Request, res: Response) => {
   const { id } = req.params;
   res.status(200).send(`GET request to the homepage ${id}`);
 };
+
+export const editCrud = (req: Request, res: Response) => {
+  const { id } = req.params;
+  res.status(200).send(`EDT request to the homepage ${id}`);
+};
+
+export const deleteCrud = (req: Request, res: Response) => {
+  const { id } = req.params;
+  res.status(200).send(`DEL request to the homepage ${id}`);
+};
