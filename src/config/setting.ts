@@ -4,6 +4,7 @@
 database credentials, out of your codebase and easily manage different configurations for different
 environments. */
 import dotenv from "dotenv";
+import { mongo } from "mongoose";
 
 /* The `dotenv.config()` function call is loading environment variables from a `.env` file into the
 `process.env` object. In this specific case, it is loading the variables from a file named `.env` in
@@ -20,6 +21,11 @@ const config = {
   api: {
     prefix: "/api" || "/api/test",
     version: "/v1" || "/v1/test",
+  },
+  db: {
+    mongo: {
+      uri: process.env.MONGO_URI || "mongodb://localhost:27017/devaeem",
+    },
   },
 };
 

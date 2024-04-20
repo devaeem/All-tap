@@ -4,7 +4,8 @@ request and response objects in an Express.js application. By importing these ty
 utilize the type definitions provided by Express to ensure proper type checking and access to the
 properties and methods associated with the request and response objects. */
 import { Request, Response } from "express";
-
+import { PrismaClient } from "@prisma/client/edge";
+const prisma = new PrismaClient();
 /**
  * The listCrud function handles GET requests to the homepage and sends a 200 status response.
  * @param {Request} req - The `req` parameter in the `listCrud` function stands for the request object,
