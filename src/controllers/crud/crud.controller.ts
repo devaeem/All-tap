@@ -5,7 +5,7 @@ utilize the type definitions provided by Express to ensure proper type checking 
 properties and methods associated with the request and response objects. */
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client/edge";
-const prisma = new PrismaClient();
+
 /**
  * The listCrud function handles GET requests to the homepage and sends a 200 status response.
  * @param {Request} req - The `req` parameter in the `listCrud` function stands for the request object,
@@ -41,6 +41,7 @@ type UserData = {
  */
 export const getCrud = (req: Request, res: Response) => {
   //const { id } = req.params;
+  //const prisma = new PrismaClient();
   const dataCrud: UserData = { id: String(req.params.id) };
   res.status(200).send(`GET request to the homepage ${dataCrud.id}`);
 };
